@@ -1,0 +1,19 @@
+.courseBox{
+    width:1220px;
+    height:120px;
+    background-color: rgba(0,0,0, 0.4);
+    color:#fff;
+    top:10%;
+    left:62%;
+    position:relative;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding:70px 30px ;
+}
+button{
+    border:none;
+    background-color:skyblue;
+}
+button:hover{
+    background-color:white;
+}

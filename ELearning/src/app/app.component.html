@@ -1,0 +1,84 @@
+
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="logged()">
+  <body>
+    <!-- <img style="width:100%;height:600px" src="assets/bg.jpg" class="bgi"/> -->
+    <!-- <div class="bar"></div>
+      <div class="tr">
+        <div class="dropdown">
+          <button routerLink="/home" style="font-weight: bold;" class="dropbtn">HOME</button>
+        </div>
+      </div>
+      <br>
+      <div class="ac">
+        <div class="dropdown">
+          <button class="dropbtn" style="font-weight: bold;">DASHBOARD</button>
+          <div class="dropdown-content">
+              <a routerLink="/course">COURSES</a>
+              <a routerLink="">USERS</a>
+          </div>
+        </div>
+      </div>
+      <div class="pr">
+        <div class="dropdown">
+          <button class="dropbtn" style="font-weight: bold;">PROFILE</button>
+          <div class="dropdown-content">
+            <a routerLink="">SETTINGS</a>
+            <button (Click)="logout()">SIGN OUT</button>
+          </div>
+        </div>
+      </div> -->
+      <div class="bar">
+        <p style="font-weight:bold;left:24%;color:black;position:absolute;font-size:26px;top:5%;">E-LEARNING</p><br>
+        <br><br>
+        <svg height="100" width="400">
+          <line x1="0" y1="0" x2="250" y2="0" style="stroke:rgba(0,0,0, 0.4);stroke-width:2" />
+        </svg>
+        <br><br>
+        <button routerLink="/home" style="width:250px;height:50px;top:170px;left:50px;position:absolute;">
+          <img style="top:15px;position: absolute;height:30px;width:30px;left:10px;"src="assets/dashboard.png">
+          <p style="font-size:20px;top:2px;left:50px;position: absolute;">DASHBOARD</p>
+        </button>
+        <br><br>
+        <button routerLink="/course" style="width:250px;height:50px;top:260px;left:50px;position:absolute;">
+          <img style="top:15px;position: absolute;height:30px;width:30px;left:10px;"src="assets/courses.png">
+          <p style="font-size:20px;top:2px;left:50px;position: absolute;">COURSES</p>
+        </button>
+        <br><br>
+        <button routerLink="/users" style="width:250px;height:50px;top:350px;left:50px;position:absolute;">
+          <img style="top:15px;position: absolute;height:30px;width:30px;left:10px;"src="assets/user.png">
+          <p style="font-size:20px;top:2px;left:50px;position: absolute;">USERS</p>
+        </button>
+        <br><br>
+        <button routerLink="/about" style="width:250px;height:50px;top:440px;left:50px;position:absolute;">
+          <img style="top:15px;position: absolute;height:30px;width:30px;left:10px;"src="assets/about.png">
+          <p style="font-size:20px;top:2px;left:50px;position: absolute;">ABOUT US</p>
+        </button>
+        <br><br>
+        
+      </div>
+
+      <div style="left:300px;height:60px;width:1200px;position:relative;">
+        
+        <button routerLink="/login" (click)="signout()" style="left:96%;top:7px;position:absolute;height:50px;width:50px;background-image:url(assets/avatarMale.png) ;"></button>
+      </div>
+      
+  </body>
+</nav>
+
+<nav *ngIf="!logged()">
+  <app-login></app-login>
+</nav>
+<!-- main app container -->
+<div class="app-container">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- credits
+<div class="text-center mt-4">
+  <p>
+      <a href="https://jasonwatmore.com/post/2020/07/18/angular-10-user-registration-and-login-example-tutorial" target="_top">Angular 10 - User Registration and Login Example & Tutorial</a>
+  </p>
+  <p>
+      <a href="https://jasonwatmore.com" target="_top">JasonWatmore.com</a>
+  </p>
+</div> -->

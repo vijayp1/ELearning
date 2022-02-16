@@ -1,0 +1,22 @@
+﻿
+<img style="width:100%;height:100%" src="assets/bg.jpg"/>
+<body style="background-image: url(/assets/courses.jpg);">
+    
+    
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="loginbox">
+            <img src="assets/avatar.png" class="avatar" />
+            
+            <h1>Login Here</h1>
+                <p>Username</p>
+                <input type="text" formControlName="username" placeholder="Enter username"/><br>
+                <p>Password</p>
+                <input type="password" formControlName="password" placeholder="Enter Password"/><br>
+                <button class="button"  type="submit">Submit</button><br>
+                
+                <a href='forgotpass'>Forgot password?</a><br>
+                <a routerLink="/register">Create New account?</a>
+        </div>
+    </form>
+    
+</body>

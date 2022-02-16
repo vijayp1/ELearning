@@ -1,0 +1,24 @@
+
+<body style="background-image: url(/assets/courses.jpg);">
+    
+    
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="loginbox">
+            <p style="text-align: center;">ADD NEW WEBSITE</p><br>
+            <p>WEBSITE NAME</p>
+            <input type="text" formControlName="name" placeholder="Ex: COURSERA"><br>
+            <p>URL</p>
+            <input type="text" formControlName="url" placeholder="PASTE URL"><br>
+            <p>WEBSITE IMAGE</p>
+            <input type="text" formControlName="img" placeholder="Copy image link"><br>
+            <p>PRICE</p>
+            <input type="text" formControlName="price" placeholder="EX: RS.5000/-"><br>
+            <p>URL ID</p>
+            <input type="text" formControlName="url_id" placeholder="WEBSITE NAME + COURSE ID"><br>
+            <p>COURSE ID</p>
+            <input type="text" formControlName="course_id" placeholder="EX : CPP"><br>
+            <button class="button" routerLink="/addWebsite" type="submit">Submit</button><br>
+        </div>
+    </form>
+    
+</body>

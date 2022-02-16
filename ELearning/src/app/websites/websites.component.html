@@ -1,0 +1,25 @@
+<body style="background-image: url(/assets/courses.jpg);">
+<!-- <div style="width:1669px;height:120px;"></div> -->
+        <div style="background-image: url(/assets/bg.jpg);position:absolute;"></div>
+        <!-- <div style="height:10px;background:transparent;top:20%;position:relative" ></div><br> -->
+        <nav *ngIf="admin()">
+        <div style="left:300px;height:60px;width:1200px;position:absolute;top:10px;left:45%;" >
+            <button routerLink="/addWebsite" style="border:none;width:100px;height:50px;position:absolute;left:40%;top:0%" >ADD WEBSITE</button>
+        </div><br></nav>
+        <div style="top:160px;left:170px;position:absolute;">
+            <div  fxFlex *ngFor="let website of listOfWebsites" >
+                <!-- <div style="width=100%;height:740px;background-image:url(bg.jpg)" >> -->
+                    <div class="courseBox"style="top:20%;position:relative" >
+                        <img src={{website.img}} style="position:absolute;top:15px;opacity:100;width:100px;height:100px;">
+                        <a href="{{website.url}}" target="_blank" style="position:absolute;font-size:30px;left:25%;top:25%">{{website.name}}</a>
+                        <p style="position:absolute;font-size:30px;left:45%;top:15%">{{website.price}}</p>
+                        <button (click)="ViewReviews(website.url_id)" style="width:100px;height:50px;position:absolute;left:65%;top:35%">View Reviews</button>
+                        <nav *ngIf="admin()">
+                            <button type="image" routerLink = "/website" (click)="DeleteSite(website.url_id)" style="background-color:crimson ; width:100px;height:50px;position:absolute;left:85%;top:35%">DELETE</button>
+                        </nav>
+                    </div><br>
+                    
+        
+            </div> 
+        </div>
+</body>

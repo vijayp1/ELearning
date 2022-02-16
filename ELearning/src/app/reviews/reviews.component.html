@@ -1,0 +1,19 @@
+
+<div style="top:160px;left:170px;position:absolute;">
+    <div class="courseBox"style="top:20%;position:relative" >
+        <!-- <img src="assets/avatar.png" style="border-radius:50%;position:absolute;top:15px;opacity:100;width:100px;height:100px;"> -->
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <input formControlName="review" style="height:100px;width:500px;position:absolute;font-size:20px;left:20%;top:15%">
+            <button type="submit" style="position:absolute;font-size:25px;left:65%;top:35%">Submit</button>
+        </form>
+        
+    </div><br>
+    <div  fxFlex *ngFor="let Review of listOfReviews" >
+            <div class="courseBox"style="top:20%;position:relative" >
+                <p style="position:absolute;font-size:30px;left:5%;top:15%">USERNAME : </p>
+                <p style="position:absolute;font-size:30px;left:20%;top:15%">{{Review.username}}</p>
+                <p style="position:absolute;font-size:30px;left:35%;top:15%">REVIEW : </p>
+                <p style="position:absolute;font-size:30px;left:50%;top:15%">{{Review.review}}</p>
+            </div><br>
+    </div> 
+</div>

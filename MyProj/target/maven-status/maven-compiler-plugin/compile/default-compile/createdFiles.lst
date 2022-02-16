@@ -1,0 +1,6 @@
+model\Course.class
+controller\Controller.class
+repository\UserRepository.class
+App.class
+repository\CourseRepository.class
+model\User.class

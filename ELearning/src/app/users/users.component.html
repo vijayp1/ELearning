@@ -1,0 +1,13 @@
+<div style="top:160px;left:170px;position:absolute;">
+    <div  fxFlex *ngFor="let user of listOfUsers" >
+        <div fxFlex *ngIf="!admin(user.username)">
+        <!-- <div style="width=100%;height:740px;background-image:url(bg.jpg)" >> -->
+            <div class="courseBox"style="top:20%;position:relative" >
+                <p style="position:absolute;font-size:30px;left:15%;top:15%">NAME : </p>
+                <p style="position:absolute;font-size:30px;left:25%;top:15%">{{user.name}}</p>
+                <p style="position:absolute;font-size:30px;left:45%;top:15%">USERNAME : </p>
+                <p style="position:absolute;font-size:30px;left:63%;top:15%">{{user.username}}</p>
+            </div><br>
+        </div>
+    </div> 
+</div>
